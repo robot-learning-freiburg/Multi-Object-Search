@@ -3,11 +3,11 @@
 Repository providing the source code for the paper "Learning Long-Horizon Robot Exploration Strategies for Multi-Object Search in Continuous Action Spaces", see the [project website](http://multi-object-search.cs.uni-freiburg.de). Please cite the paper as follows:
 
     @article{schmalstieg2022learning,
-  								title={Learning Long-Horizon Robot Exploration Strategies for Multi-Object Search in Continuous Action Spaces},
-  								author={Schmalstieg, Fabian and Honerkamp, Daniel and Welschehold, Tim and Valada, Abhinav},
-  								journal={arXiv preprint arXiv:2205.11384},
-  								year={2022}
-								}
+	     title={Learning Long-Horizon Robot Exploration Strategies for Multi-Object Search in Continuous Action Spaces},
+  	     author={Schmalstieg, Fabian and Honerkamp, Daniel and Welschehold, Tim and Valada, Abhinav},
+  	     journal={arXiv preprint arXiv:2205.11384},
+  	     year={2022}
+    }
     
 # Installation
 
