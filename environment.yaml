@@ -1,0 +1,17 @@
+name: modulation_rl
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch=1.11.0
+  - torchvision
+  - cudatoolkit=11.3
+  - numpy
+  - pip
+  - matplotlib
+  - typing_extensions
+  - pip:
+      - igibson==2.0.3
+      - stable-baselines3[extra]
