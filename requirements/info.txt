@@ -1,0 +1,2 @@
+paste the urdf files into the iGibson folder under /data/assets/models/
+paste the inflated maps into the iGibson folder under /data/ig_dataset/scenes/
