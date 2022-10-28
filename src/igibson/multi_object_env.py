@@ -376,7 +376,7 @@ class MultiObjectEnv(BaseFunctions):
             img_cpy = self.global_map.copy()
             open_ind = np.argwhere(self.task.wanted_objects == 1)
             img_cpy[int(self.mapping.rob_pose[1]) - 4:int(self.mapping.rob_pose[1]) + 4,
-                    int(self.mapping.rob_pose[0]) - 4:int(self.mapping.rob_pose[0]) + 4] = self.mapping.arrow
+                    int(self.mapping.rob_pose[0]) - 4:int(self.mapping.rob_pose[0]) + 4] = self.mapping.colors['circle']
             for i in open_ind:
                 tr_ps = self.task.target_pos_list[int(i)]
                 tr_ps = self.mapping.world2map(tr_ps)
