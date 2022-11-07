@@ -16,22 +16,22 @@ texture_randomization_freq: null
 object_randomization_freq: null
 
 # robot setup
-#robot: Fetch
-#circle_size: 6 #for Fetch 
-#is_discrete: false
-#robot_scale: 0.85
-#angular_velocity: 2.0
-#linear_velocity: 1.0
-#self_collision: true
-#collision_ignore_link_a_ids: [0, 1, 2]  # ignore collisions with links for Fetch
+robot: Fetch
+circle_size: 6 #for Fetch 
+is_discrete: false
+robot_scale: 0.85
+angular_velocity: 2.0
+linear_velocity: 1.0
+self_collision: true
+collision_ignore_link_a_ids: [0, 1, 2]  # ignore collisions with links for Fetch
 #-------------------------------
-robot: Locobot
-robot_scale: 1.0
-circle_size: 6 #for Locobot
-angular_velocity: 1.0
-linear_velocity: 0.5
-collision_ignore_link_a_ids: [ 1, 2, 3, 4 ]  # ignore collisions with links for Locobot
-self_collision: false
+#robot: Locobot
+#robot_scale: 1.0
+#circle_size: 6 #for Locobot
+#angular_velocity: 1.0
+#linear_velocity: 0.5
+#collision_ignore_link_a_ids: [ 1, 2, 3, 4 ]  # ignore collisions with links for Locobot
+#self_collision: false
 
 #Simulation details
 #For one env.step() call, call 4x pybullet.step() and sync
@@ -41,7 +41,7 @@ physics_timestep_div: 120.0
 action_timestep: 1.0
 action_timestep_div: 10.0
 
-mode: gui
+mode: headless
 # task setup
 num_bins: 12
 clip_potential_rew: false
@@ -55,13 +55,13 @@ replace_objects: false
 remove_doors: true
 min_episodes: 25
 history_length_aux: 16
-initial_aux_prob: 1.0
+initial_aux_prob: 0.16
 max_aux_episodic_prob: 0.72
 resample_episode_prob: 0.15
-evaluate: true
-show_map: true
-multiple_envs: false
-resample_task: false
+evaluate: false
+show_map: false
+multiple_envs: true
+resample_task: true
 grid_res: 0.033
 sem_categories: 6
 use_aux_task: true

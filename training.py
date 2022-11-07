@@ -75,7 +75,7 @@ def main():
 
             return env
 
-        set_random_seed()
+        set_random_seed(seed)
         # set_determinism_training(seed)
 
         return _init
