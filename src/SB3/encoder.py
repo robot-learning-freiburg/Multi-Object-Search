@@ -43,8 +43,36 @@ class EgocentricEncoders(BaseFeaturesExtractor):
                 feature_size = 256
                 n_input_channels = subspace.shape[0]  # channel last
 
-                cnn = models.resnet18(pretrained=True)
+                #cnn = models.resnet18(pretrained=True)
+                cnn = nn.Sequential(
+                    nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3),
+                    nn.ReLU(),
 
+                    nn.MaxPool2d(3, stride=2),
+
+                    nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1),
+                    nn.ReLU(),
+                    nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1),
+                    nn.ReLU(),
+                    
+
+                    nn.Conv2d(64,128, kernel_size=3, stride=2, padding=1),
+                    nn.ReLU(),
+                    nn.Conv2d(128, 128, kernel_size=3, stride=1, padding=1),
+                    nn.ReLU(),
+
+                    nn.Conv2d(128,128, kernel_size=3, stride=2, padding=1),
+                    nn.ReLU(),
+                    nn.Conv2d(128, 64, kernel_size=3, stride=1, padding=1),
+                    nn.ReLU(),
+
+                    nn.Conv2d(64, 64, kernel_size=3, stride=2, padding=1),
+                    nn.ReLU(),
+                    nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1),
+                    nn.ReLU(),
+
+                    nn.Flatten(),
+                )
                 test_tensor = th.zeros([n_input_channels, subspace.shape[1], subspace.shape[2]])
                 with th.no_grad():
                     n_flatten = cnn(test_tensor[None]).shape[1]
