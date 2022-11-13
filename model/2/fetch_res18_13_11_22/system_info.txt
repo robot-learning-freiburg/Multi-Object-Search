@@ -1,0 +1,7 @@
+OS: Linux-5.4.0-128-generic-x86_64-with-glibc2.17 #144-Ubuntu SMP Tue Sep 20 11:00:04 UTC 2022
+Python: 3.8.13
+Stable-Baselines3: 1.4.0
+PyTorch: 1.8.2+cu111
+GPU Enabled: True
+Numpy: 1.23.1
+Gym: 0.19.0
